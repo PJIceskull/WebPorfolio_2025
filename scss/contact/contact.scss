@@ -1,0 +1,88 @@
+#Contact-Section {
+  // background-color: $payneGray;
+  min-height: $site-height - 75px;
+  max-width: $site-width;
+  color: $anti-FlashWhite;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.contactText {
+  margin: 20px 75px;
+  h1 {
+    font-size: 110px;
+    // font-size: clamp(3.125rem, 6.875vw, 6.875rem);
+    font-size: $h1-section;
+    font-family: FuturaBook;
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-bottom: 0;
+  }
+  hr {
+    // border: 7px solid;
+    height: 7px;
+    background-color: $anti-FlashWhite;
+    border-style: none;
+  }
+  p {
+    // font-size: 32px;
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    font-family: FuturaBook;
+    margin-top: 34.5px;
+  }
+}
+.messageBox {
+  margin: 0 35px;
+}
+.messageTitle {
+  font-family: FuturaHeavy;
+  font-size: 45px;
+  font-size: clamp(1.4rem, 2.8125vw, 2.8125rem);
+  margin: 0 auto;
+  margin-bottom: 14px;
+}
+.socialIcons {
+  width: 35vw;
+  min-width: 245px;
+  max-width: 315px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 60px;
+  margin: 25px;
+  a {
+    text-decoration: none;
+  }
+  i {
+    color: $anti-FlashWhite;
+    transition-duration: 0.2s;
+    &:hover {
+      color: $powderBlue;
+    }
+    &:active {
+      color: $eerieBlack;
+    }
+  }
+}
+.copyrightText {
+  color: $powderBlue;
+  font-size: 30px;
+  font-family: FuturaBook;
+}
+
+// Media Queries
+@media screen and (max-width: 1280px) {
+  .contactText {
+    h1 {
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .contactText {
+      h1 {
+      }
+    }
+    .messageTitle {
+    }
+  }
+}

@@ -1,0 +1,128 @@
+#Home-Section {
+  max-width: $site-width;
+  min-height: $site-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .homeText {
+    width: 50%;
+    // height: 100%;
+    min-height: $site-height;
+    // max-width: 640px;
+    // height: 800px;
+    // background-color: $eerieBlack;
+    background-color: $darkslategray;
+    // padding-left: 80px;
+    // padding-right: 75px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      color: $anti-FlashWhite;
+      // color: $tomato;
+    }
+    h2,
+    h3,
+    p {
+      color: $powderBlue;
+      // color: navajowhite;
+      // color: sandybrown;
+    }
+    // h3 {
+    //   color: sandybrown;
+    // }
+    h1 {
+      // font-size: 75px;
+      // font-size: clamp(4rem, 4.69vw, 4.8rem);
+      font-size: clamp(2.75rem, 3.5vw, 4rem);
+      font-family: FuturaExtraBlack;
+      margin: 10px 65px 30px 85px;
+    }
+    h2 {
+      // font-size: 30px;
+      font-size: clamp(1.3125rem, 1.875vw, 2rem);
+      font-family: FuturaMedium;
+      margin: 83px 70px 0 85px;
+    }
+    h3 {
+      // font-size: 30px;
+      font-size: clamp(1.3125rem, 1.875vw, 1.875rem);
+      font-family: FuturaBook;
+      // margin-left: 89px;
+      // margin-right: 99px;
+      margin: 0 75px 40px;
+    }
+    p {
+      // font-size: 27px;
+      font-size: clamp(1.25rem, 1.6875vw, 1.7em);
+      margin: 20px 92px 40px;
+    }
+  }
+}
+.homeImg {
+  // background-color: gold;
+  min-height: $site-height;
+  width: 40%;
+  // width: 529.5px;
+  // width: 53vw;
+}
+.profilePic {
+  height: $site-height - 50px;
+  // width: 100%;
+  background-image: url(../img/profile_pic.JPEG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $powderBlue;
+  background-blend-mode: luminosity;
+  border-radius: 35px;
+}
+
+// Media Queries
+@media screen and (max-width: 1280px) {
+  #Home-Section {
+  }
+  @media screen and (max-width: 800px) {
+    #Home-Section {
+      flex-direction: column-reverse;
+      height: 50%;
+      .homeText {
+        // height: 50%;
+        width: 100%;
+        // min-height: 500px;
+
+        h1 {
+          margin: 20px 45px 0;
+          text-align: center;
+        }
+        h2 {
+          margin: 0 45px;
+        }
+        h3 {
+          margin: 20px 45px;
+        }
+        p {
+          margin: 20px 45px 30px;
+        }
+      }
+    }
+    .homeImg {
+      // height: 50%;
+      min-height: calc($site-height / 1.75);
+      width: 75%;
+      margin: 0 auto;
+      .profilePic {
+        max-height: calc($site-height / 1.75);
+        height: 450px;
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .homeText {
+        justify-content: space-evenly;
+        padding: 60px 0;
+      }
+    }
+  }
+}

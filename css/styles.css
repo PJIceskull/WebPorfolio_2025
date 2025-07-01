@@ -1,0 +1,698 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #405952;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+@font-face {
+  font-family: FuturaCondensedLight;
+  src: url(fonts/Futura-CondensedLight.ttf);
+}
+@font-face {
+  font-family: FuturaLight;
+  src: url(fonts/Futura_Light_font.ttf);
+}
+@font-face {
+  font-family: FuturaBook;
+  src: url(fonts/Futura_Book_font.ttf);
+}
+@font-face {
+  font-family: FuturaMedium;
+  src: url(fonts/futura_medium_bt.ttf);
+}
+@font-face {
+  font-family: FuturaHeavy;
+  src: url(fonts/Futura_Heavy_font.ttf);
+}
+@font-face {
+  font-family: FuturaExtraBlack;
+  src: url(fonts/Futura_Extra_Black_font.ttf);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: FuturaBook;
+}
+
+.wrapper {
+  max-width: 1280vw;
+  min-height: 800px;
+  margin: 0 auto;
+}
+
+nav {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  min-height: 63px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  background-color: #1c2321;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  font-size: 18px;
+  color: #a9b4c2;
+  z-index: 5;
+}
+nav a {
+  color: #a9b4c2;
+  text-decoration: none;
+  font-weight: 520;
+  transition-duration: 0.3s;
+}
+nav a:hover {
+  text-decoration: underline;
+  color: #eef1ef;
+}
+nav .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav p {
+  margin: 0;
+}
+nav i {
+  font-size: 26px;
+}
+nav i:hover {
+  color: #eef1ef;
+}
+nav i:active {
+  color: #1c2321;
+  background-color: #eef1ef;
+}
+nav .hamburger-menu {
+  cursor: pointer;
+}
+nav .hamburger-menu .bar1,
+nav .hamburger-menu .bar2,
+nav .hamburger-menu .bar3 {
+  width: 30px;
+  height: 2px;
+  background-color: #a9b4c2;
+  margin: 8px 0;
+  transition: 0.3s;
+}
+nav .hamburger-menu:hover .bar1,
+nav .hamburger-menu:hover .bar2,
+nav .hamburger-menu:hover .bar3, nav .hamburger-menu:active .bar1,
+nav .hamburger-menu:active .bar2,
+nav .hamburger-menu:active .bar3, nav .hamburger-menu:focus .bar1,
+nav .hamburger-menu:focus .bar2,
+nav .hamburger-menu:focus .bar3 {
+  background-color: #eef1ef;
+}
+nav .open .bar1 {
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+nav .open .bar2 {
+  opacity: 0;
+}
+nav .open .bar3 {
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+nav .open .mobile-menu {
+  display: block;
+}
+
+.desktopNav .links {
+  gap: 52px;
+}
+
+.mobile-nav {
+  bottom: 0;
+  top: unset;
+  display: none;
+}
+.mobile-nav .mobile-menu {
+  width: 100%;
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 63px;
+  background-color: #1c2321;
+}
+.mobile-nav .links {
+  flex-direction: column;
+}
+.mobile-nav .links a {
+  border: 2px solid #eef1ef;
+  padding: 27px;
+  margin: 0;
+  width: 100%;
+  font-size: 45px;
+  font-family: FuturaHeavy;
+}
+
+@media screen and (min-width: 1280px) {
+  nav {
+    max-width: 1280vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+}
+@media screen and (max-width: 575px) {
+  nav .links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  nav .links a {
+    margin-top: 15px;
+  }
+}
+button {
+  text-transform: uppercase;
+  color: #eef1ef;
+  border: 5px solid #eef1ef;
+  transition-duration: 0.6s;
+}
+button a {
+  color: #eef1ef;
+  text-decoration: none;
+  font-family: FuturaHeavy;
+}
+
+.contactDark {
+  background-color: #405952;
+  width: 230px;
+  height: 68px;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+.contactDark a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactDark:hover {
+  background-color: #eef1ef;
+  color: #405952;
+}
+.contactDark:hover a {
+  color: #405952;
+}
+
+.messageButton {
+  background-color: #405952;
+  font-family: FuturaHeavy;
+  font-size: clamp(1.5rem, 1.75vw, 2rem);
+}
+.messageButton a {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 15px;
+  width: 100%;
+  height: 100%;
+  padding: 20px 28px;
+}
+.messageButton:hover {
+  background-color: #eef1ef;
+}
+.messageButton:hover a {
+  color: #405952;
+}
+
+.viewSite {
+  border: 3px solid #86a9b6;
+  height: 68px;
+  font-size: 25px;
+  margin: 0 auto;
+  font-family: FuturaBook;
+  transition: 0.25s;
+}
+.viewSite a {
+  color: #86a9b6;
+  font-size: 25px;
+  font-family: FuturaMedium;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.viewSite:hover {
+  color: #eef1ef;
+  background-color: #86a9b6;
+}
+.viewSite:hover a {
+  color: #eef1ef;
+}
+
+@media screen and (max-width: 800px) {
+  .contactDark {
+    margin-bottom: 15px;
+  }
+}
+#Home-Section {
+  max-width: 1280vw;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#Home-Section .homeText {
+  width: 50%;
+  min-height: 800px;
+  background-color: #405952;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-direction: column;
+}
+#Home-Section .homeText h1 {
+  color: #eef1ef;
+}
+#Home-Section .homeText h2,
+#Home-Section .homeText h3,
+#Home-Section .homeText p {
+  color: #a9b4c2;
+}
+#Home-Section .homeText h1 {
+  font-size: clamp(2.75rem, 3.5vw, 4rem);
+  font-family: FuturaExtraBlack;
+  margin: 10px 65px 30px 85px;
+}
+#Home-Section .homeText h2 {
+  font-size: clamp(1.3125rem, 1.875vw, 2rem);
+  font-family: FuturaMedium;
+  margin: 83px 70px 0 85px;
+}
+#Home-Section .homeText h3 {
+  font-size: clamp(1.3125rem, 1.875vw, 1.875rem);
+  font-family: FuturaBook;
+  margin: 0 75px 40px;
+}
+#Home-Section .homeText p {
+  font-size: clamp(1.25rem, 1.6875vw, 1.7em);
+  margin: 20px 92px 40px;
+}
+
+.homeImg {
+  min-height: 800px;
+  width: 40%;
+}
+
+.profilePic {
+  height: 750px;
+  background-image: url(../img/profile_pic.JPEG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #a9b4c2;
+  background-blend-mode: luminosity;
+  border-radius: 35px;
+}
+
+@media screen and (max-width: 1280px) and (max-width: 800px) {
+  #Home-Section {
+    flex-direction: column-reverse;
+    height: 50%;
+  }
+  #Home-Section .homeText {
+    width: 100%;
+  }
+  #Home-Section .homeText h1 {
+    margin: 20px 45px 0;
+    text-align: center;
+  }
+  #Home-Section .homeText h2 {
+    margin: 0 45px;
+  }
+  #Home-Section .homeText h3 {
+    margin: 20px 45px;
+  }
+  #Home-Section .homeText p {
+    margin: 20px 45px 30px;
+  }
+  .homeImg {
+    min-height: 457.1428571429px;
+    width: 75%;
+    margin: 0 auto;
+  }
+  .homeImg .profilePic {
+    max-height: 457.1428571429px;
+    height: 450px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 800px) and (max-width: 500px) {
+  .homeText {
+    justify-content: space-evenly;
+    padding: 60px 0;
+  }
+}
+#About-Section {
+  min-height: 800px;
+  max-width: 1280vw;
+  background-size: 80px 80px;
+  color: #eef1ef;
+  padding-top: 75px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.aboutText {
+  background-color: #1c2321;
+  background-color: #405952;
+  width: 55%;
+  padding: 50px;
+}
+.aboutText h1 {
+  font-size: clamp(3.125rem, 6vw, 6.25rem);
+  font-weight: 200;
+  font-family: FuturaBook;
+  margin-bottom: 10px;
+}
+.aboutText hr {
+  max-width: 540px;
+  height: 7px;
+  background-color: #eef1ef;
+  border-style: none;
+  margin-bottom: 50px;
+}
+
+.aboutText-Body {
+  max-width: 1180vw;
+}
+.aboutText-Body p {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.AboutGradient {
+  width: 100%;
+  height: 162px;
+  background-image: linear-gradient(#a7b9bf, #405952);
+}
+
+@media screen and (max-width: 768px) {
+  #About-Section {
+    flex-direction: column;
+  }
+  .aboutText {
+    margin: 0 auto;
+    width: 85%;
+  }
+}
+#Work-Section {
+  background-color: #405952;
+  min-height: 800px;
+  max-width: 1280vw;
+}
+
+.WorkTitle h1 {
+  padding-top: 15px;
+  font-family: FuturaBook;
+  font-size: 110px;
+  text-transform: uppercase;
+  color: #eef1ef;
+  text-align: center;
+}
+.WorkTitle hr {
+  border-style: none;
+  height: 11px;
+  background-color: #a7b9bf;
+}
+
+.websiteSection {
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 50px;
+  padding: 0 36px;
+}
+
+.websitePrevBox {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projectText {
+  max-width: 400px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+.projectText h2,
+.projectText p,
+.projectText .descText {
+  margin-bottom: 0;
+}
+.projectText h2 {
+  color: #eef1ef;
+  font-size: 45px;
+  text-align: center;
+}
+.projectText p {
+  font-size: 24px;
+  color: #a9b4c2;
+  font-family: FuturaBook;
+}
+.projectText .descText {
+  font-size: 18px;
+  max-width: 360px;
+  text-wrap: pretty;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 1180px) {
+  .websitePrevBox:nth-child(1), .websitePrevBox:nth-child(2) {
+    flex-direction: row;
+    gap: 35px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .websitePrevBox:nth-child(1) .websitePrevPic, .websitePrevBox:nth-child(2) .websitePrevPic {
+    height: 425px;
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1750px) {
+  .websitePrevBox:nth-child(1), .websitePrevBox:nth-child(2) {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .WorkTitle h1 {
+    font-size: 6.875vw;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1024px) {
+  #Work-Section {
+    padding-top: 60px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 849px) {
+  .websiteSection {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 800px) {
+  .WorkTitle h1 {
+    font-size: 3.125rem;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 540px) {
+  .websiteSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 600px;
+    margin-top: 40px;
+  }
+  .websiteSection .websitePrevBox {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .aboutSite-Text h2 {
+    font-size: 32px;
+  }
+}
+.websitePrevPic {
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition-duration: 0.5s;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 8px 6px 1px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+}
+
+.dfindyOrgPic {
+  background-image: url(../img/websitePics/dfindy_org_Preview.png);
+}
+
+.oldPortfolioPic {
+  background-image: url(../img/websitePics/porfolio_preview.png);
+}
+
+.eventsyPic {
+  background-image: url(../img/websitePics/Eventsy_Preview.png);
+}
+
+.dancepunkPic {
+  background-image: url(../img/websitePics/Ecommerce_Preview.png);
+  background-position: top;
+}
+
+.qrCardPic {
+  background-image: url(../img/websitePics/QR_Card_Preview.png);
+}
+
+.blogPic {
+  background-image: url(../img/websitePics/Blog_Preview.png);
+}
+
+.booknookPic {
+  background-image: url(../img/websitePics/Booknook_Preview.png);
+}
+
+.jungleCookPic {
+  background-image: url(../img/websitePics/Jungle_Cook_Preview.png);
+  background-position: left;
+}
+
+.coffeePic {
+  background-image: url(../img/websitePics/Coffee_Maker_Preview.png);
+}
+
+.soapFactoryPic {
+  background-image: url(../img/websitePics/soap_factory_preview.png);
+  background-position: 0;
+}
+
+.sweetPic {
+  background-image: url(../img/websitePics/sweet_io_preview.png);
+  background-position: -25px;
+}
+
+@media screen and (max-width: 425px) {
+  .websitePrevPic {
+    height: 200px;
+    width: 250px;
+  }
+}
+#Contact-Section {
+  min-height: 725px;
+  max-width: 1280vw;
+  color: #eef1ef;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.contactText {
+  margin: 20px 75px;
+}
+.contactText h1 {
+  font-size: 110px;
+  font-size: clamp(3.125rem, 6vw, 6.25rem);
+  font-family: FuturaBook;
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-bottom: 0;
+}
+.contactText hr {
+  height: 7px;
+  background-color: #eef1ef;
+  border-style: none;
+}
+.contactText p {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-family: FuturaBook;
+  margin-top: 34.5px;
+}
+
+.messageBox {
+  margin: 0 35px;
+}
+
+.messageTitle {
+  font-family: FuturaHeavy;
+  font-size: 45px;
+  font-size: clamp(1.4rem, 2.8125vw, 2.8125rem);
+  margin: 0 auto;
+  margin-bottom: 14px;
+}
+
+.socialIcons {
+  width: 35vw;
+  min-width: 245px;
+  max-width: 315px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 60px;
+  margin: 25px;
+}
+.socialIcons a {
+  text-decoration: none;
+}
+.socialIcons i {
+  color: #eef1ef;
+  transition-duration: 0.2s;
+}
+.socialIcons i:hover {
+  color: #a9b4c2;
+}
+.socialIcons i:active {
+  color: #1c2321;
+}
+
+.copyrightText {
+  color: #a9b4c2;
+  font-size: 30px;
+  font-family: FuturaBook;
+}
+
+/*# sourceMappingURL=styles.css.map */

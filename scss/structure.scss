@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  // background-color: $eerieBlack;
+  background-color: $darkslategray;
+}
+html {
+  scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+// Import Futura Fonts
+@font-face {
+  font-family: FuturaCondensedLight;
+  src: url(fonts/Futura-CondensedLight.ttf);
+}
+@font-face {
+  font-family: FuturaLight;
+  src: url(fonts/Futura_Light_font.ttf);
+}
+@font-face {
+  font-family: FuturaBook;
+  src: url(fonts/Futura_Book_font.ttf);
+}
+@font-face {
+  font-family: FuturaMedium;
+  src: url(fonts/futura_medium_bt.ttf);
+}
+@font-face {
+  font-family: FuturaHeavy;
+  src: url(fonts/Futura_Heavy_font.ttf);
+}
+@font-face {
+  font-family: FuturaExtraBlack;
+  src: url(fonts/Futura_Extra_Black_font.ttf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: FuturaBook;
+}
+
+.wrapper {
+  max-width: $site-width;
+  min-height: $site-height;
+  margin: 0 auto;
+}
+
+// @media screen and (max-width: 510px) {
+//   .wrapper {
+//     min-width: 100%;
+//   }
+// }

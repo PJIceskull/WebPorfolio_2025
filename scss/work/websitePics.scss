@@ -1,0 +1,60 @@
+.websitePrevPic {
+  // height: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition-duration: 0.5s;
+  width: 350px;
+  // margin-right: 10px;
+  border-radius: 15px;
+  box-shadow: 8px 6px 1px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+}
+.dfindyOrgPic {
+  background-image: url(../img/websitePics/dfindy_org_Preview.png);
+}
+.oldPortfolioPic {
+  background-image: url(../img/websitePics/porfolio_preview.png);
+}
+.eventsyPic {
+  background-image: url(../img/websitePics/Eventsy_Preview.png);
+}
+.dancepunkPic {
+  background-image: url(../img/websitePics/Ecommerce_Preview.png);
+  background-position: top;
+}
+.qrCardPic {
+  background-image: url(../img/websitePics/QR_Card_Preview.png);
+}
+.blogPic {
+  background-image: url(../img/websitePics/Blog_Preview.png);
+}
+.booknookPic {
+  background-image: url(../img/websitePics/Booknook_Preview.png);
+}
+.jungleCookPic {
+  background-image: url(../img/websitePics/Jungle_Cook_Preview.png);
+  background-position: left;
+}
+// .webDevConPic {
+//   background-image: url(../img/websitePics/WebDev_Conference_Preview.png);
+//   background-position: left;
+// }
+.coffeePic {
+  background-image: url(../img/websitePics/Coffee_Maker_Preview.png);
+}
+.soapFactoryPic {
+  background-image: url(../img/websitePics/soap_factory_preview.png);
+  background-position: 0;
+}
+.sweetPic {
+  background-image: url(../img/websitePics/sweet_io_preview.png);
+  background-position: -25px;
+}
+@media screen and (max-width: 425px) {
+  .websitePrevPic {
+    height: 200px;
+    width: 250px;
+  }
+}

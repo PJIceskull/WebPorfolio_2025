@@ -1,0 +1,46 @@
+{
+  "Works": [
+    {
+      "WebsiteTitle": "DFIndy Website",
+      "WebsiteURL": "https://dfindy.org/",
+      "WebsiteImage": "dfindyOrg",
+      "WebsiteCodeLangs": "HTML, CSS, PHP, WordPress",
+      "WebsiteDesc": "Worked with <b>CICOA</b> to create a WordPress website for their Dementia Friendly Indianapolis branch. The goal of this website is to provide resources for those living with dementia and their care partners. The site also lists upcoming community events that members can attend."
+    },
+    {
+      "WebsiteTitle": "Blog Preview Card",
+      "WebsiteURL": "https://pjiceskull.github.io/blog-preview-card-main/",
+      "WebsiteImage": "blog",
+      "WebsiteCodeLangs": "HTML, CSS, SASS",
+      "WebsiteDesc": "This is a challenge I did on <b>Frontend Mentor</b> where I had to build out this Blog preview card shown above. This project is great for improving my HTML and CSS fundamentals as I worked with the box model and hover states for each element. This exercise also puts my knowledge of the box-shadow property to work."
+    },
+    {
+      "WebsiteTitle": "Booknook Site",
+      "WebsiteURL": "https://pjiceskull.github.io/Booknook-Site/",
+      "WebsiteImage": "booknook",
+      "WebsiteCodeLangs": "HTML, CSS, SASS, JS",
+      "WebsiteDesc": "A <b>team-based project</b>, where our task is to create a bookstore website. We were both assigned different roles when building the site. My role was creating the About page, the Book page, and the Login pages. I was also responsible for creating the footer element and the overall responsiveness of the website."
+    },
+    {
+      "WebsiteTitle": "QR Card",
+      "WebsiteURL": "https://pjiceskull.github.io/qr-code-component-main/",
+      "WebsiteImage": "qrCard",
+      "WebsiteCodeLangs": "HTML, CSS, SASS",
+      "WebsiteDesc": "For this challenge, I was tasked with building out the QR card component from Frontend Mentor. One of my responsibilities was to get it close to how it looked in the design prototypes, as long as making sure it was responsive. This was a fun exercise testing my CSS skills."
+    },
+    {
+      "WebsiteTitle": "Jungle Cook",
+      "WebsiteURL": "https://pjiceskull.github.io/Jungle-Cook-Final/dist/",
+      "WebsiteImage": "jungleCook",
+      "WebsiteCodeLangs": "HTML, CSS, SASS, JS, Firebase",
+      "WebsiteDesc": "A recipe website that allows the user to create their recipes. Not only is the website responsive for other devices, but it also has <b>dynamic features.</b> Based on the <b>CRUD</b> design pattern, users can create, store, and delete recipes. Along with being able to sign in with an account, these features were all implemented through the <b>Firebase API</b> and <b>Jquery</b>."
+    },
+    {
+      "WebsiteTitle": "Eventsy",
+      "WebsiteURL": "https://in215-pissah.github.io/Eventsy-Site/",
+      "WebsiteImage": "eventsy",
+      "WebsiteCodeLangs": "HTML, CSS, SASS, JS",
+      "WebsiteDesc": "Recreated Eventsy website using CSS and made it responsive on all devices. By using <b>JQuery</b> and the <b>MVC model</b>, the website displays information based on its page."
+    }
+  ]
+}
